@@ -1,0 +1,15 @@
+.prose, .max-w-prose {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+::selection {
+    background-color: #ff5722 !important; /* The highlight background color */
+    color: #ffffff !important;            /* The text color when highlighted */
+}
+
+::-moz-selection {
+    background-color: #ff5722 !important;
+    color: #ffffff !important;
+}
+

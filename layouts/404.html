@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+{{ $ender := resources.Get "img/ender.png" }}
+
+<div class="flex flex-col items-center justify-center py-12 text-center">
+
+  {{ with $ender }}
+    <img
+      src="{{ .RelPermalink }}"
+      alt="Enderman"
+      class="w-56 h-auto mb-6"
+    >
+  {{ end }}
+
+  <h1 class="mb-3 text-5xl font-extrabold">
+    Error 404
+  </h1>
+
+  <p class="text-xl text-neutral-400 dark:text-neutral-500">
+    The Enderman picked up this page and teleported away with it.
+  </p>
+
+  <div class="prose dark:prose-invert mt-4">
+    <p>
+      We searched the <strong>Overworld</strong>, the <strong>Nether</strong>,
+      and even <strong>The End</strong>...
+      <br>
+      Unfortunately, this page has vanished into another dimension.
+    </p>
+  </div>
+
+  <a
+    href="/"
+    class="mt-6 inline-flex items-center rounded-lg bg-neutral-900 px-5 py-3 text-white transition hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+  >
+    🏠 Return Home
+  </a>
+
+</div>
+
+{{ end }}
